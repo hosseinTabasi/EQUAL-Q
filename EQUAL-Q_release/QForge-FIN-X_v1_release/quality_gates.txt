@@ -1,0 +1,60 @@
+QForge-FIN-X v1.0 Quality Gates
+Generated (UTC): 2026-09-07T12:06:23.339489+00:00
+Master seed: 20260907
+Author: Hossein Tabasi
+============================================================
+
+[1] NaNs in public features: 0
+ret_1d             0
+ret_5d             0
+ret_21d            0
+vol_21d            0
+vol_63d            0
+rsi_14             0
+momentum_10        0
+momentum_21        0
+volume_z_21        0
+range_hl           0
+sector_id          0
+mkt_ret_1d         0
+mkt_vol_21d        0
+iv_21d             0
+iv_skew            0
+attn_sector        0
+attn_mkt           0
+attn_dispersion    0
+
+[2] Leak columns in public features: []
+    Public features (18): ['ret_1d', 'ret_5d', 'ret_21d', 'vol_21d', 'vol_63d', 'rsi_14', 'momentum_10', 'momentum_21', 'volume_z_21', 'range_hl', 'sector_id', 'mkt_ret_1d', 'mkt_vol_21d', 'iv_21d', 'iv_skew', 'attn_sector', 'attn_mkt', 'attn_dispersion']
+    Pack-4: ['ret_1d', 'vol_21d', 'momentum_10', 'mkt_ret_1d']
+    Pack-8: ['ret_1d', 'vol_21d', 'momentum_10', 'mkt_ret_1d', 'ret_5d', 'rsi_14', 'volume_z_21', 'mkt_vol_21d']
+    PASS: no look-ahead / oracle in public features
+
+[3] Return moments (ret_1d):
+    overall mean=0.000116, ann_vol=25.6%
+    n_assets=12, n_dates=2024, n_rows=24288
+
+[4] y_dir_1d balance: positive=51.04% (target 45–55%)
+    y_dir_5d positive=51.47%
+
+[5] Pack-4 / Pack-8 columns present: PASS
+
+[6] Synthetic IV: iv_21d mean=0.2028, iv_skew mean=-0.0242
+    Attention: attn_mkt sum/day≈1 check: 1.0000
+    attn_sector mean=0.5000
+
+[7] Static splits: train_dates=1241, valid=390, test=393
+    Walk-forward windows: 8
+      W0: train_end=2022-05-31, test=2022-06-01→2022-08-26 (n_test_dates=63)
+      W1: train_end=2022-08-26, test=2022-08-29→2022-11-23 (n_test_dates=63)
+      W2: train_end=2022-11-23, test=2022-11-24→2023-02-20 (n_test_dates=63)
+      W3: train_end=2023-02-20, test=2023-02-21→2023-05-18 (n_test_dates=63)
+      W4: train_end=2023-05-18, test=2023-05-19→2023-08-15 (n_test_dates=63)
+      W5: train_end=2023-08-15, test=2023-08-16→2023-11-10 (n_test_dates=63)
+      W6: train_end=2023-11-10, test=2023-11-13→2024-02-07 (n_test_dates=63)
+      W7: train_end=2024-02-07, test=2024-02-08→2024-05-06 (n_test_dates=63)
+
+[8] Targets present: ['y_dir_1d', 'y_dir_5d', 'y_exret_5d', 'y_stress_5d', 'rank_21d', 'fwd_ret_5d', 'fwd_ret_21d']
+
+============================================================
+Quality gates: ALL PASS

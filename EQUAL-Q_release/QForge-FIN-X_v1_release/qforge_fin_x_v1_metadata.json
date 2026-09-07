@@ -1,0 +1,99 @@
+{
+  "brand": "QForge-FIN-X v1.0",
+  "full_name": "Quantum-Forge Finance Extended Benchmark",
+  "version": "1.0",
+  "citation": "QForge-FIN-X v1.0 (2026), equal-budget quantum vs classical finance panel (superset of QForge-FIN v1.0).",
+  "license_data": "CC-BY 4.0",
+  "license_code": "MIT",
+  "author": "Hossein Tabasi",
+  "master_seed": 20260907,
+  "parent_benchmark": "QForge-FIN v1.0",
+  "parent_master_seed": 20260907,
+  "sub_seeds": {
+    "synth_iv": 651452041,
+    "synth_attention": 263664243,
+    "regime_pit": 373518204,
+    "macros": 1857870045,
+    "regimes": 1559925380,
+    "returns": 1041922316,
+    "microstructure": 1039666863,
+    "asset_QF01": 534338703,
+    "asset_QF02": 954997251,
+    "asset_QF03": 1304745695,
+    "asset_QF04": 1671080142,
+    "asset_QF05": 1665936302,
+    "asset_QF06": 1002703332,
+    "asset_QF07": 1994102538,
+    "asset_QF08": 318007763,
+    "asset_QF09": 1910910932,
+    "asset_QF10": 712360905,
+    "asset_QF11": 1012533018,
+    "asset_QF12": 1684473471
+  },
+  "n_assets": 12,
+  "n_rows": 24288,
+  "n_dates": 2024,
+  "date_range_panel": [
+    "2018-03-30",
+    "2025-12-31"
+  ],
+  "public_features": [
+    "ret_1d",
+    "ret_5d",
+    "ret_21d",
+    "vol_21d",
+    "vol_63d",
+    "rsi_14",
+    "momentum_10",
+    "momentum_21",
+    "volume_z_21",
+    "range_hl",
+    "sector_id",
+    "mkt_ret_1d",
+    "mkt_vol_21d",
+    "iv_21d",
+    "iv_skew",
+    "attn_sector",
+    "attn_mkt",
+    "attn_dispersion"
+  ],
+  "pack4": [
+    "ret_1d",
+    "vol_21d",
+    "momentum_10",
+    "mkt_ret_1d"
+  ],
+  "pack8": [
+    "ret_1d",
+    "vol_21d",
+    "momentum_10",
+    "mkt_ret_1d",
+    "ret_5d",
+    "rsi_14",
+    "volume_z_21",
+    "mkt_vol_21d"
+  ],
+  "targets": [
+    "y_dir_1d",
+    "y_dir_5d",
+    "y_exret_5d",
+    "y_stress_5d",
+    "rank_21d",
+    "fwd_ret_5d",
+    "fwd_ret_21d"
+  ],
+  "oracle_file": "qforge_fin_x_v1_oracle_factors.csv",
+  "qubit_recommendations": {
+    "primary": 4,
+    "encoding": "Pack-4 or PCA(4) on Pack-8/public; StandardScaler train-only",
+    "depth": "ZZFeatureMap reps=2; VQC AngleEmbedding + 2 StronglyEntanglingLayers",
+    "backend": "pennylane.default.qubit (statevector); numpy fallback documented"
+  },
+  "limitations": [
+    "100% synthetic; not real market data; no investment advice.",
+    "Superset of QForge-FIN v1.0; core returns identical to parent panel.",
+    "Regime PIT probabilities are ORACLE-only; must not enter training features.",
+    "NISQ experiments use small-n and 4 qubits; simulator \u2260 hardware.",
+    "Equal-budget null results are expected and publishable."
+  ]
+}

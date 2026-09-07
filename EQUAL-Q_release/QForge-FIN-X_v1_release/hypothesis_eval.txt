@@ -1,0 +1,25 @@
+EQUAL-Q Hypothesis Evaluation
+============================================================
+
+H0 primary contrasts (quantum better, Holm-adjusted):
+  AUC QK-RBF n400: mean_q=0.7142 mean_c=0.7431 Δ=-0.0289 t=-6.262 p_greater=1.0000 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  AUC VQC-LIN n400: mean_q=0.7394 mean_c=0.7471 Δ=-0.0077 t=-2.211 p_greater=0.9814 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  IC QK-RBF n400: mean_q=0.2180 mean_c=0.2920 Δ=-0.0740 t=-6.922 p_greater=1.0000 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  IC VQC-LIN n400: mean_q=0.2697 mean_c=0.2932 Δ=-0.0234 t=-2.189 p_greater=0.9805 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+
+H0 REJECTED (quantum outperformance): False
+
+H1: IC gap QK-RBF n150=-0.0909, n400=-0.0740, QK400-RBFfull=-0.0748
+H1 (gap differs across n): not clearly supported
+
+H2: (AUC_stress - AUC_calm) QK=-0.0721 RBF=-0.0907 Δ(QK-RBF)=0.0186
+H2 (quantum relatively better in stress): supported (descriptive)
+
+H3 geometry means:
+  CKA(QK,RBF)=0.739 CKA(VQC,RBF)=0.851
+  KTA QK=0.087 RBF=0.169 LIN=0.201
+  NN purity QK=0.303 RBF=0.306
+H3 (geometry moves): supported
+
+H4 net Sharpe @5bps: LIN=8.479 RBF=3.360 QK=-1.787 VQC=5.995
+H4 (quantum does NOT beat classical): confirmed

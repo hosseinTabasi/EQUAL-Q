@@ -1,0 +1,9 @@
+EQUAL-Q ENVIRONMENT
+Author: Hossein Tabasi
+Master seed: 20260907
+Backend: pennylane.default.qubit, zz-kernel=analytic~PL
+PennyLane: True
+Pack-4: ['ret_1d', 'vol_21d', 'momentum_10', 'mkt_ret_1d']
+n_list: [150, 400]; seeds: [0, 1, 2]; WF windows: 8
+ZZ reps: 2; VQC layers: 2; qubits: 4
+Wall time_s: 151.6

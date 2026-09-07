@@ -1,0 +1,6 @@
+{
+  "rbf_gamma": 0.13200660795465582,
+  "svm_C": 0.5,
+  "ridge_alpha": 1.0,
+  "frozen_on": "window0"
+}

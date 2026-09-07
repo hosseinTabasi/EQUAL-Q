@@ -1,0 +1,91 @@
+{
+  "train": {
+    "start": "2018-03-30",
+    "end": "2022-12-30",
+    "n_dates": 1241
+  },
+  "valid": {
+    "start": "2023-01-02",
+    "end": "2024-06-28",
+    "n_dates": 390
+  },
+  "test": {
+    "start": "2024-07-01",
+    "end": "2025-12-31",
+    "n_dates": 393
+  },
+  "walk_forward": [
+    {
+      "window_id": 0,
+      "train_end": "2022-05-31",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1088,
+      "test_start": "2022-06-01",
+      "test_end": "2022-08-26",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 1,
+      "train_end": "2022-08-26",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1151,
+      "test_start": "2022-08-29",
+      "test_end": "2022-11-23",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 2,
+      "train_end": "2022-11-23",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1214,
+      "test_start": "2022-11-24",
+      "test_end": "2023-02-20",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 3,
+      "train_end": "2023-02-20",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1277,
+      "test_start": "2023-02-21",
+      "test_end": "2023-05-18",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 4,
+      "train_end": "2023-05-18",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1340,
+      "test_start": "2023-05-19",
+      "test_end": "2023-08-15",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 5,
+      "train_end": "2023-08-15",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1403,
+      "test_start": "2023-08-16",
+      "test_end": "2023-11-10",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 6,
+      "train_end": "2023-11-10",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1466,
+      "test_start": "2023-11-13",
+      "test_end": "2024-02-07",
+      "n_test_dates": 63
+    },
+    {
+      "window_id": 7,
+      "train_end": "2024-02-07",
+      "train_start": "2018-03-30",
+      "n_train_dates": 1529,
+      "test_start": "2024-02-08",
+      "test_end": "2024-05-06",
+      "n_test_dates": 63
+    }
+  ]
+}
