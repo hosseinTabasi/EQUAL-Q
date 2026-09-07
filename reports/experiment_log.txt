@@ -1,0 +1,225 @@
+EQUAL-Q ZZ kernel verification
+HAS_PL=True
+reps=2
+
+Analytic K diagonal (expect ~1): 1.0000, 1.0000, 1.0000, 1.0000, 1.0000, 1.0000
+  (0,0) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+  (0,1) analytic=0.4803 pennylane=0.5842 absdiff=0.1040
+  (0,2) analytic=0.2796 pennylane=0.0296 absdiff=0.2500
+  (0,3) analytic=0.0115 pennylane=0.0532 absdiff=0.0417
+  (0,4) analytic=0.6084 pennylane=0.2506 absdiff=0.3578
+  (0,5) analytic=0.2388 pennylane=0.1081 absdiff=0.1307
+  (1,1) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+  (1,2) analytic=0.0636 pennylane=0.0477 absdiff=0.0159
+  (1,3) analytic=0.0030 pennylane=0.0575 absdiff=0.0545
+  (1,4) analytic=0.6029 pennylane=0.1623 absdiff=0.4406
+  (1,5) analytic=0.1166 pennylane=0.0556 absdiff=0.0610
+  (2,2) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+  (2,3) analytic=0.1187 pennylane=0.0320 absdiff=0.0868
+  (2,4) analytic=0.3302 pennylane=0.0865 absdiff=0.2437
+  (2,5) analytic=0.0416 pennylane=0.1275 absdiff=0.0859
+  (3,3) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+  (3,4) analytic=0.0182 pennylane=0.0500 absdiff=0.0318
+  (3,5) analytic=0.0202 pennylane=0.0524 absdiff=0.0322
+  (4,4) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+  (4,5) analytic=0.1845 pennylane=0.0287 absdiff=0.1558
+  (5,5) analytic=1.0000 pennylane=1.0000 absdiff=0.0000
+Mean abs diff analytic vs PennyLane: 0.0996
+NOTE: Analytic kernel is the EQUAL-Q primary path for speed;
+PennyLane default.qubit used for VQC expectations + kernel spot-check.
+
+Frozen HPs: {'rbf_gamma': 0.13200660795465582, 'svm_C': 0.5, 'ridge_alpha': 1.0, 'frozen_on': 'window0'}
+
+=== T-class y_dir_5d ===
+  W0: train=13056 test=756
+    n=150 s0 LIN=0.778 RBF=0.757 QK=0.670 VQC=0.768
+    n=400 s0 LIN=0.781 RBF=0.750 QK=0.690 VQC=0.759
+    n=150 s1 LIN=0.772 RBF=0.761 QK=0.679 VQC=0.764
+    n=400 s1 LIN=0.774 RBF=0.771 QK=0.716 VQC=0.772
+    n=150 s2 LIN=0.777 RBF=0.751 QK=0.657 VQC=0.759
+    n=400 s2 LIN=0.774 RBF=0.741 QK=0.681 VQC=0.747
+  W1: train=13812 test=756
+    n=150 s0 LIN=0.702 RBF=0.714 QK=0.716 VQC=0.713
+    n=400 s0 LIN=0.716 RBF=0.723 QK=0.737 VQC=0.721
+    n=150 s1 LIN=0.751 RBF=0.743 QK=0.750 VQC=0.779
+    n=400 s1 LIN=0.731 RBF=0.734 QK=0.738 VQC=0.753
+    n=150 s2 LIN=0.746 RBF=0.740 QK=0.746 VQC=0.770
+    n=400 s2 LIN=0.750 RBF=0.751 QK=0.768 VQC=0.768
+  W2: train=14568 test=756
+    n=150 s0 LIN=0.758 RBF=0.740 QK=0.706 VQC=0.730
+    n=400 s0 LIN=0.754 RBF=0.744 QK=0.726 VQC=0.748
+    n=150 s1 LIN=0.701 RBF=0.709 QK=0.711 VQC=0.700
+    n=400 s1 LIN=0.747 RBF=0.744 QK=0.728 VQC=0.744
+    n=150 s2 LIN=0.745 RBF=0.755 QK=0.743 VQC=0.758
+    n=400 s2 LIN=0.747 RBF=0.751 QK=0.740 VQC=0.763
+  W3: train=15324 test=756
+    n=150 s0 LIN=0.790 RBF=0.799 QK=0.796 VQC=0.743
+    n=400 s0 LIN=0.783 RBF=0.803 QK=0.788 VQC=0.784
+    n=150 s1 LIN=0.773 RBF=0.755 QK=0.687 VQC=0.776
+    n=400 s1 LIN=0.805 RBF=0.791 QK=0.769 VQC=0.776
+    n=150 s2 LIN=0.823 RBF=0.831 QK=0.816 VQC=0.841
+    n=400 s2 LIN=0.802 RBF=0.822 QK=0.805 VQC=0.818
+  W4: train=16080 test=756
+    n=150 s0 LIN=0.703 RBF=0.688 QK=0.656 VQC=0.661
+    n=400 s0 LIN=0.707 RBF=0.689 QK=0.641 VQC=0.664
+    n=150 s1 LIN=0.708 RBF=0.697 QK=0.648 VQC=0.682
+    n=400 s1 LIN=0.700 RBF=0.700 QK=0.664 VQC=0.693
+    n=150 s2 LIN=0.694 RBF=0.687 QK=0.672 VQC=0.689
+    n=400 s2 LIN=0.696 RBF=0.700 QK=0.681 VQC=0.694
+  W5: train=16836 test=756
+    n=150 s0 LIN=0.639 RBF=0.687 QK=0.625 VQC=0.676
+    n=400 s0 LIN=0.715 RBF=0.729 QK=0.702 VQC=0.701
+    n=150 s1 LIN=0.719 RBF=0.692 QK=0.627 VQC=0.684
+    n=400 s1 LIN=0.726 RBF=0.705 QK=0.655 VQC=0.703
+    n=150 s2 LIN=0.732 RBF=0.691 QK=0.627 VQC=0.676
+    n=400 s2 LIN=0.724 RBF=0.708 QK=0.669 VQC=0.689
+  W6: train=17592 test=756
+    n=150 s0 LIN=0.722 RBF=0.718 QK=0.685 VQC=0.721
+    n=400 s0 LIN=0.717 RBF=0.721 QK=0.695 VQC=0.724
+    n=150 s1 LIN=0.691 RBF=0.673 QK=0.603 VQC=0.632
+    n=400 s1 LIN=0.710 RBF=0.701 QK=0.628 VQC=0.705
+    n=150 s2 LIN=0.706 RBF=0.699 QK=0.644 VQC=0.661
+    n=400 s2 LIN=0.703 RBF=0.705 QK=0.674 VQC=0.683
+  W7: train=18348 test=756
+    n=150 s0 LIN=0.750 RBF=0.747 QK=0.704 VQC=0.763
+    n=400 s0 LIN=0.754 RBF=0.744 QK=0.711 VQC=0.747
+    n=150 s1 LIN=0.806 RBF=0.802 QK=0.758 VQC=0.791
+    n=400 s1 LIN=0.811 RBF=0.804 QK=0.772 VQC=0.796
+    n=150 s2 LIN=0.809 RBF=0.806 QK=0.767 VQC=0.791
+    n=400 s2 LIN=0.804 RBF=0.802 QK=0.765 VQC=0.794
+
+=== T-reg y_exret_5d ===
+  W0: train=13056 test=756
+    n=150 s0 LIN_IC=0.420 RBF=0.374 QK=0.178 VQC=0.274
+    n=400 s0 LIN_IC=0.408 RBF=0.350 QK=0.227 VQC=0.321
+    n=150 s1 LIN_IC=0.406 RBF=0.374 QK=0.249 VQC=0.328
+    n=400 s1 LIN_IC=0.428 RBF=0.413 QK=0.293 VQC=0.333
+    n=150 s2 LIN_IC=0.415 RBF=0.366 QK=0.176 VQC=0.081
+    n=400 s2 LIN_IC=0.420 RBF=0.414 QK=0.251 VQC=0.409
+  W1: train=13812 test=756
+    n=150 s0 LIN_IC=0.168 RBF=0.188 QK=0.129 VQC=0.218
+    n=400 s0 LIN_IC=0.173 RBF=0.170 QK=0.159 VQC=0.052
+    n=150 s1 LIN_IC=0.137 RBF=0.143 QK=0.078 VQC=0.084
+    n=400 s1 LIN_IC=0.176 RBF=0.221 QK=0.203 VQC=0.235
+    n=150 s2 LIN_IC=0.177 RBF=0.302 QK=0.127 VQC=0.239
+    n=400 s2 LIN_IC=0.198 RBF=0.244 QK=0.235 VQC=0.230
+  W2: train=14568 test=756
+    n=150 s0 LIN_IC=0.095 RBF=0.108 QK=0.143 VQC=0.114
+    n=400 s0 LIN_IC=0.225 RBF=0.185 QK=0.125 VQC=0.128
+    n=150 s1 LIN_IC=0.180 RBF=0.176 QK=0.034 VQC=0.128
+    n=400 s1 LIN_IC=0.229 RBF=0.269 QK=0.256 VQC=0.259
+    n=150 s2 LIN_IC=0.143 RBF=0.164 QK=0.148 VQC=0.034
+    n=400 s2 LIN_IC=0.228 RBF=0.253 QK=0.229 VQC=0.250
+  W3: train=15324 test=756
+    n=150 s0 LIN_IC=0.271 RBF=0.183 QK=0.098 VQC=0.211
+    n=400 s0 LIN_IC=0.294 RBF=0.250 QK=0.187 VQC=0.266
+    n=150 s1 LIN_IC=0.176 RBF=0.183 QK=0.075 VQC=0.190
+    n=400 s1 LIN_IC=0.270 RBF=0.252 QK=0.183 VQC=0.215
+    n=150 s2 LIN_IC=0.280 RBF=0.300 QK=0.201 VQC=0.300
+    n=400 s2 LIN_IC=0.324 RBF=0.285 QK=0.288 VQC=0.313
+  W4: train=16080 test=756
+    n=150 s0 LIN_IC=0.265 RBF=0.271 QK=0.266 VQC=0.233
+    n=400 s0 LIN_IC=0.283 RBF=0.292 QK=0.201 VQC=0.231
+    n=150 s1 LIN_IC=0.277 RBF=0.250 QK=0.202 VQC=0.189
+    n=400 s1 LIN_IC=0.280 RBF=0.270 QK=0.259 VQC=0.297
+    n=150 s2 LIN_IC=0.268 RBF=0.219 QK=0.140 VQC=0.213
+    n=400 s2 LIN_IC=0.281 RBF=0.211 QK=0.112 VQC=0.304
+  W5: train=16836 test=756
+    n=150 s0 LIN_IC=0.232 RBF=0.295 QK=0.156 VQC=0.213
+    n=400 s0 LIN_IC=0.245 RBF=0.321 QK=0.230 VQC=0.309
+    n=150 s1 LIN_IC=0.218 RBF=0.230 QK=0.157 VQC=0.211
+    n=400 s1 LIN_IC=0.257 RBF=0.314 QK=0.256 VQC=0.219
+    n=150 s2 LIN_IC=0.257 RBF=0.298 QK=0.246 VQC=0.214
+    n=400 s2 LIN_IC=0.223 RBF=0.255 QK=0.235 VQC=0.231
+  W6: train=17592 test=756
+    n=150 s0 LIN_IC=0.261 RBF=0.245 QK=0.150 VQC=0.169
+    n=400 s0 LIN_IC=0.269 RBF=0.292 QK=0.162 VQC=0.244
+    n=150 s1 LIN_IC=0.111 RBF=0.110 QK=0.004 VQC=-0.037
+    n=400 s1 LIN_IC=0.281 RBF=0.203 QK=0.085 VQC=0.218
+    n=150 s2 LIN_IC=0.261 RBF=0.250 QK=0.154 VQC=0.172
+    n=400 s2 LIN_IC=0.281 RBF=0.298 QK=0.148 VQC=0.202
+  W7: train=18348 test=756
+    n=150 s0 LIN_IC=0.423 RBF=0.381 QK=0.290 VQC=0.305
+    n=400 s0 LIN_IC=0.429 RBF=0.452 QK=0.343 VQC=0.458
+    n=150 s1 LIN_IC=0.360 RBF=0.227 QK=0.171 VQC=0.050
+    n=400 s1 LIN_IC=0.407 RBF=0.362 QK=0.286 VQC=0.337
+    n=150 s2 LIN_IC=0.414 RBF=0.350 QK=0.232 VQC=0.352
+    n=400 s2 LIN_IC=0.428 RBF=0.434 QK=0.278 VQC=0.414
+
+=== Geometry H3 ===
+  W0 n=150 s0 CKA(QK,RBF)=0.747 KTA_QK=0.069
+  W0 n=400 s0 CKA(QK,RBF)=0.736 KTA_QK=0.089
+  W0 n=150 s1 CKA(QK,RBF)=0.729 KTA_QK=0.096
+  W0 n=400 s1 CKA(QK,RBF)=0.730 KTA_QK=0.061
+  W3 n=150 s0 CKA(QK,RBF)=0.740 KTA_QK=0.108
+  W3 n=400 s0 CKA(QK,RBF)=0.727 KTA_QK=0.072
+  W3 n=150 s1 CKA(QK,RBF)=0.746 KTA_QK=0.066
+  W3 n=400 s1 CKA(QK,RBF)=0.746 KTA_QK=0.087
+  W7 n=150 s0 CKA(QK,RBF)=0.741 KTA_QK=0.108
+  W7 n=400 s0 CKA(QK,RBF)=0.734 KTA_QK=0.085
+  W7 n=150 s1 CKA(QK,RBF)=0.747 KTA_QK=0.114
+  W7 n=400 s1 CKA(QK,RBF)=0.738 KTA_QK=0.093
+
+=== T-book n=400 ===
+  W0 s0 Sharpe@5bps LIN=13.20 RBF=-0.60 QK=-6.74 VQC=8.35
+  W0 s1 Sharpe@5bps LIN=13.38 RBF=1.19 QK=-1.21 VQC=5.86
+  W0 s2 Sharpe@5bps LIN=11.96 RBF=-3.24 QK=-6.77 VQC=6.63
+  W1 s0 Sharpe@5bps LIN=6.74 RBF=-0.70 QK=-6.34 VQC=3.64
+  W1 s1 Sharpe@5bps LIN=4.76 RBF=0.41 QK=-6.62 VQC=6.75
+  W1 s2 Sharpe@5bps LIN=7.64 RBF=-10.93 QK=-14.94 VQC=3.43
+  W2 s0 Sharpe@5bps LIN=8.86 RBF=5.13 QK=0.24 VQC=2.68
+  W2 s1 Sharpe@5bps LIN=7.53 RBF=3.77 QK=-0.74 VQC=4.28
+  W2 s2 Sharpe@5bps LIN=7.35 RBF=6.35 QK=-0.03 VQC=11.11
+  W3 s0 Sharpe@5bps LIN=4.46 RBF=6.32 QK=0.91 VQC=8.44
+  W3 s1 Sharpe@5bps LIN=12.70 RBF=10.40 QK=4.42 VQC=12.28
+  W3 s2 Sharpe@5bps LIN=9.93 RBF=5.68 QK=-2.30 VQC=-0.46
+  W4 s0 Sharpe@5bps LIN=9.92 RBF=4.53 QK=-1.49 VQC=7.25
+  W4 s1 Sharpe@5bps LIN=8.79 RBF=4.83 QK=-4.23 VQC=4.73
+  W4 s2 Sharpe@5bps LIN=9.97 RBF=2.56 QK=0.58 VQC=5.24
+  W5 s0 Sharpe@5bps LIN=1.65 RBF=-3.07 QK=-6.36 VQC=-2.05
+  W5 s1 Sharpe@5bps LIN=3.48 RBF=-0.46 QK=-2.96 VQC=3.07
+  W5 s2 Sharpe@5bps LIN=8.37 RBF=1.02 QK=-2.59 VQC=4.30
+  W6 s0 Sharpe@5bps LIN=10.76 RBF=9.13 QK=4.31 VQC=9.82
+  W6 s1 Sharpe@5bps LIN=9.58 RBF=8.07 QK=0.14 VQC=10.66
+  W6 s2 Sharpe@5bps LIN=9.04 RBF=10.07 QK=5.04 VQC=4.43
+  W7 s0 Sharpe@5bps LIN=-3.71 RBF=-1.89 QK=-4.21 VQC=-1.25
+  W7 s1 Sharpe@5bps LIN=14.32 RBF=11.03 QK=3.21 VQC=11.17
+  W7 s2 Sharpe@5bps LIN=12.79 RBF=11.01 QK=5.78 VQC=13.53
+EQUAL-Q Hypothesis Evaluation
+============================================================
+
+H0 primary contrasts (quantum better, Holm-adjusted):
+  AUC QK-RBF n400: mean_q=0.7142 mean_c=0.7431 Δ=-0.0289 t=-6.262 p_greater=1.0000 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  AUC VQC-LIN n400: mean_q=0.7394 mean_c=0.7471 Δ=-0.0077 t=-2.211 p_greater=0.9814 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  IC QK-RBF n400: mean_q=0.2180 mean_c=0.2920 Δ=-0.0740 t=-6.922 p_greater=1.0000 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+  IC VQC-LIN n400: mean_q=0.2697 mean_c=0.2932 Δ=-0.0234 t=-2.189 p_greater=0.9805 p_holm=1.0000 n=24 -> not rejected for quantum outperformance
+
+H0 REJECTED (quantum outperformance): False
+
+H1: IC gap QK-RBF n150=-0.0909, n400=-0.0740, QK400-RBFfull=-0.0748
+H1 (gap differs across n): not clearly supported
+
+H2: (AUC_stress - AUC_calm) QK=-0.0721 RBF=-0.0907 Δ(QK-RBF)=0.0186
+H2 (quantum relatively better in stress): supported (descriptive)
+
+H3 geometry means:
+  CKA(QK,RBF)=0.739 CKA(VQC,RBF)=0.851
+  KTA QK=0.087 RBF=0.169 LIN=0.201
+  NN purity QK=0.303 RBF=0.306
+H3 (geometry moves): supported
+
+H4 net Sharpe @5bps: LIN=8.479 RBF=3.360 QK=-1.787 VQC=5.995
+H4 (quantum does NOT beat classical): confirmed
+
+Figures written.
+EQUAL-Q ENVIRONMENT
+Author: Hossein Tabasi
+Master seed: 20260907
+Backend: pennylane.default.qubit, zz-kernel=analytic~PL
+PennyLane: True
+Pack-4: ['ret_1d', 'vol_21d', 'momentum_10', 'mkt_ret_1d']
+n_list: [150, 400]; seeds: [0, 1, 2]; WF windows: 8
+ZZ reps: 2; VQC layers: 2; qubits: 4
+Wall time_s: 151.6
+
+Done in 151.6s H0_rejected=False
